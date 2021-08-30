@@ -1,4 +1,4 @@
-import json
+import json, os
 from datetime import datetime
 
 data_filename = "./data/data.txt"
@@ -23,6 +23,9 @@ def save_output(data: dict) -> None :
     file = open( output_filename, "w" )
     file.write(json_string)
     file.close()
+
+    with open( output_filename, "r") as file:
+        print(file.read())
 
 
 if __name__ == "__main__":
