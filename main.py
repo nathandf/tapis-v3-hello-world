@@ -16,7 +16,7 @@ def main() -> None :
         output["charCount"] += len(line)
     file.close()
 
-    save_output(output)
+    print(json.dumps(output))
 
 def save_output(data: dict) -> None :
     json_string = json.dumps(data)
